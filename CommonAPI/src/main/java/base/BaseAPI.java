@@ -15,11 +15,11 @@ public class BaseAPI {
         System.out.println("Chrome browser is firing");
 
         if(getOSNameFromSystem.contains("Mac")){
-            System.setProperty("webdriver.chrome.driver", "/Users/palmauzzal/ComW3School/Driver-Browser/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "/Users/palmauzzal/ComW3School/CommonAPI/Driver-Browser/chromedriver");
         } if(getOSNameFromSystem.contains("Windows")){
-            System.setProperty("webdriver.chrome.driver", "/Users/palmauzzal/ComW3School/Driver-Browser/chromedriver.exe");
+            System.setProperty("webdriver.gecko.driver", "/Users/palmauzzal/ComW3School/CommonAPI/Driver-Browser/geckodriver.exe");
         } else if (getOSNameFromSystem.contains("Linux")){
-            System.setProperty("webdriver.chrome.driver", "/Users/palmauzzal/ComW3School/Driver-Browser/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "/Users/palmauzzal/ComW3School/CommonAPI/Driver-Browser/chromedriver.exe");
         }
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
